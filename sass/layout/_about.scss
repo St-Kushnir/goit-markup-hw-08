@@ -1,37 +1,90 @@
-.about-list {
-    display: flex;
-    justify-content: center;
-    }
-    
-    .about-list__item {
-        width: 270px;
-    }
-    
-    .about-list__img {
-        width: 270px;
-        height: 120px;
-        background: #F5F4FA;
-        border-radius: 4px;
-        margin-bottom: 30px;
-        @extend %align;
-        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+// .about-list {
+//     display: flex;
+//     flex-wrap: wrap;
+//     align-items: center;
+//     }
 
-        &:hover,
-        &:focus {
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        }
-    }
-    
-    .about-list__item + .about-list__item {
-    margin-left: 30px;
-    }
-    
-    .subtitle_theme_white {
-        margin-bottom: 10px;
-        color: var(--about-subtitle-color);
-    } 
+//     .about-list__item {
+//         width: 450px;
+//         margin-bottom: 30px;
+//     }
 
-    .about-list__desc {
-        @include font (400, 14px, 24px, 0.03em);
-        color: var(--about-desc-color);
-    }
+//     .about-list__img {
+//         margin-bottom: 30px;
+//         width: 450px;
+//         height: 120px;
+//         background: #F5F4FA;
+//         @extend %align;
+//         transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+//         &:hover,
+//         &:focus {
+//             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+//         }
+//     }
+
+//         .subtitle_theme_white {
+//         text-align: center;
+//         margin-bottom: 10px;
+//         color: var(--about-subtitle-color);
+//     } 
+
+//     .about-list__desc {
+//         @include font (400, 14px, 24px, 0.03em);
+//         color: var(--about-desc-color);
+//     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .about-list {
+//     display: flex;
+//              justify-content: center;
+//     }
+    
+//     .about-list__item {
+        // margin-bottom: 30px;
+//                    width: 354px         width: 270px;
+//     }
+    
+
+//     .about-list__img {
+//                        width: 354px              width: 270px;
+//         height: 120px;
+//         background: #F5F4FA;
+//         border-radius: 4px;
+//         @extend %align;
+//         transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+//         &:hover,
+//         &:focus {
+//             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+//         }
+//     }
+    
+//     .about-list__item + .about-list__item {
+//     margin-left: 30px;
+//     }
+    
+//     .subtitle_theme_white {
+//         margin-bottom: 10px;
+//         color: var(--about-subtitle-color);
+//     } 
+
+//     .about-list__desc {
+//         @include font (400, 14px, 24px, 0.03em);
+//         color: var(--about-desc-color);
+//     }
