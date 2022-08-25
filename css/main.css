@@ -409,20 +409,18 @@ a {
   margin: 0 auto;
 }
 
-.header__container {
-  display: flex;
-  align-items: center;
-}
-
 .logo_theme_white {
   color: var(--header-logo-color);
 }
 
-@media screen and (min-width: 480px) {
-  .header {
-    border-bottom: 1px solid #ECECEC;
-  }
+.header__container {
+  display: flex;
 }
+
+.header {
+  border-bottom: 1px solid #ECECEC;
+}
+
 @media screen and (max-width: 767px) {
   .nav-list {
     display: none;
@@ -431,8 +429,8 @@ a {
     display: none;
   }
   .header {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   .mobile-menu-open {
     background-color: transparent;
@@ -441,13 +439,14 @@ a {
     line-height: 0;
   }
   .header__container {
+    align-items: center;
     justify-content: space-between;
   }
 }
 @media screen and (min-width: 768px) {
   .header {
-    padding-top: 26px;
-    padding-bottom: 26px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .mobile-menu-open {
     display: none;
@@ -459,7 +458,6 @@ a {
   .nav-list {
     margin-left: 87px;
     display: flex;
-    align-items: center;
   }
   .nav-list__item {
     position: relative;
@@ -482,21 +480,20 @@ a {
     position: absolute;
     display: block;
     content: "";
-    margin-top: 28px;
+    margin-top: 27px;
     width: 100%;
     height: 4px;
     background: var(--accent-color);
     border-radius: 2px;
   }
   .header-links {
-    display: flex;
-    flex-direction: column;
     margin-left: auto;
   }
   .header-links__item:not(:last-child) {
     margin-bottom: 10px;
   }
   .header-links__mail, .header-links__tel {
+    display: flex;
     font-weight: 500;
     font-size: 12px;
     line-height: 1.1666666667;
@@ -506,6 +503,18 @@ a {
   }
   .header-links__mail:hover, .header-links__mail:focus, .header-links__tel:hover, .header-links__tel:focus {
     color: var(--accent-color);
+  }
+  .header-links__mail-icon {
+    width: 14px;
+    height: 14px;
+  }
+  .header-links__tel-icon {
+    width: 10px;
+    height: 14px;
+  }
+  .header-links__mail-icon, .header-links__tel-icon {
+    margin-right: 8px;
+    Fill: currentColor;
   }
 }
 @media screen and (max-width: 1199px) {
@@ -518,40 +527,102 @@ a {
 }
 @media screen and (min-width: 1200px) {
   .header {
-    padding-top: 24px;
+    padding-top: 25px;
     padding-bottom: 25px;
   }
-  .logo_theme_white {
-    margin-right: 93px;
+  .header__container {
+    align-items: baseline;
+  }
+  .nav-list {
+    margin-left: 93px;
+  }
+  .nav-list__link_carent::after {
+    margin-top: 31px;
+  }
+  .header-links {
+    display: flex;
+    margin-left: auto;
+  }
+  .header-links__item + .header-links__item {
+    margin-left: 30px;
+  }
+  .header-links__mail, .header-links__tel {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1428571429;
+    letter-spacing: 0.02em;
+  }
+  .header-links__mail-icon, .header-links__tel-icon {
+    margin-right: 10px;
+  }
+  .header-links__mail-icon {
+    width: 16px;
+    height: 16px;
+  }
+  .header-links__tel-icon {
+    width: 10px;
+    height: 16px;
   }
 }
-.hero {
-  text-align: center;
-  padding: 200px 0;
-  background-color: var(--hero-background-color);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-background-img.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  max-width: 1600px;
-  margin: 0 auto;
+@media screen and (min-width: 320px) {
+  .hero {
+    text-align: center;
+    padding: 118px 0;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/mobile/hero-mobile@1x.jpg);
+    background-color: var(--hero-background-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    max-width: 480px;
+  }
+  .hero__slogan {
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.6153846154;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--hero-text-color);
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+  .hero__btn {
+    padding: 0;
+    margin-top: 30px;
+  }
 }
-
-.hero__slogan {
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.3636363636;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--hero-text-color);
-  width: 696px;
-  margin: 0 auto;
+@media (min-device-pixel-ratio: 2) and (max-width: 767px), (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), (min-resolution: 192dpi) and (max-width: 767px), (min-resolution: 2dppx) and (max-width: 767px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/mobile/hero-mobile@2x.jpg);
+  }
 }
-
-.hero__btn {
-  margin-top: 30px;
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/tablet/hero-tablet@1x.jpg);
+    max-width: 768px;
+  }
 }
-
+@media (min-device-pixel-ratio: 2) and (min-width: 768px), (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), (min-resolution: 192dpi) and (min-width: 768px), (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/tablet/hero-tablet@2x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/desktop/hero-desktop@1x.jpg);
+    max-width: 1600px;
+    padding: 200px 0;
+  }
+  .hero__slogan {
+    width: 696px;
+  }
+}
+@media (min-device-pixel-ratio: 2) and (min-width: 1200px), (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), (min-resolution: 192dpi) and (min-width: 1200px), (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/desktop/hero-desktop@2x.jpg);
+  }
+}
 .about-list {
   display: flex;
   justify-content: center;
