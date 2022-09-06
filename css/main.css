@@ -32,7 +32,7 @@
   margin: -1px;
 }
 
-.subscription__btn, .footer-socials__link, .customers-list__link, .social-list__link, .about-tasks__products, .form__policy, .modal__close-btn {
+.subscription__btn, .footer-socials__link, .customers-list__link, .social-list__link, .about-tasks__products, .about-list__img, .form__policy, .modal__close-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,7 +136,7 @@ a {
     padding: 0;
     line-height: 0;
     position: absolute;
-    top: 17px;
+    top: 10px;
     right: 15px;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
@@ -662,6 +662,83 @@ a {
 @media (min-device-pixel-ratio: 2) and (min-width: 1200px), (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), (min-resolution: 192dpi) and (min-width: 1200px), (min-resolution: 2dppx) and (min-width: 1200px) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/desktop/hero-desktop@2x.jpg);
+  }
+}
+.about-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.about-list__item {
+  width: 450px;
+}
+
+.about-list__img {
+  margin-bottom: 30px;
+  width: 450px;
+  height: 120px;
+  background: #F5F4FA;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.about-list__img:hover, .about-list__img:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.subtitle_theme_white {
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--about-subtitle-color);
+}
+
+.about-list__desc {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7142857143;
+  letter-spacing: 0.03em;
+  color: var(--about-desc-color);
+}
+
+@media screen and (min-width: 768px) {
+  .about-list__item {
+    width: 354px;
+    height: 224px;
+  }
+  .about-list__img {
+    width: 354px;
+    height: 120px;
+  }
+  .about-list__item:nth-child(2n+1) {
+    margin-right: 30px;
+  }
+  .subtitle_theme_white {
+    text-align: start;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .about-list__item:nth-child(2n+1) {
+    margin-right: 30px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .about-list__item {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about-list {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .about-list__item {
+    width: 270px;
+    height: 248px;
+  }
+  .about-list__img {
+    width: 270px;
+  }
+  .about-list__item + .about-list__item {
+    margin-left: 30px;
   }
 }
 .section_about_tasks {
