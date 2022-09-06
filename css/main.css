@@ -223,9 +223,14 @@ a {
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--title-text-color);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
+@media screen and (min-width: 1200px) {
+  .title {
+    margin-bottom: 50px;
+  }
+}
 .button {
   font-weight: 700;
   font-size: 16px;
@@ -667,7 +672,6 @@ a {
 .about-list {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
 }
 
 .about-list__item {
@@ -787,7 +791,7 @@ a {
 .team-list__content {
   text-align: center;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
 }
 
 .team-list__workman {
@@ -833,6 +837,11 @@ a {
   Fill: currentColor;
 }
 
+@media screen and (min-width: 1200px) {
+  .team-list__content {
+    padding-bottom: 30px;
+  }
+}
 .customers-list {
   display: flex;
   justify-content: space-between;

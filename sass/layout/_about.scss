@@ -1,7 +1,7 @@
 .about-list {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    // align-items: center;
     }
 
     .about-list__item {
@@ -64,7 +64,6 @@
         margin-bottom: 30px;
     }
 }
-
 
 @media screen and (min-width: 1200px) {
     .about-list {
