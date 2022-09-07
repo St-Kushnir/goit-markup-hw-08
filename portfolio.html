@@ -26,18 +26,64 @@
                 <li class="nav-list__item"><a href="" class="nav-list__link">Контакти</a></li>
             </ul>
     </nav>
+    <button type="button" class="mobile-menu-open js-open-menu" >
+        <svg class="mobile-menu-open__icon" width="40" height="40">
+            <use href="./images/sprite.svg#burger-icon"></use>
+        </svg>
+    </button>
         <ul class="header-links">
             <li class="header-links__item">
                 <a href="mailto:info@devstudio.com" class="header-links__mail">
-                    <svg class="header-links__mail-icon" width="16" height="16"><use href="./images/sprite.svg#envelope">
+                    <svg class="header-links__mail-icon" ><use href="./images/sprite.svg#envelope">
                     </use></svg> info@devstudio.com</a></li>
-                
             <li class="header-links__item">
                 <a href="tel:+380961111111" class="header-links__tel">
-                <svg class="header-links__tel-icon" width="10" height="16">
+                <svg class="header-links__tel-icon" >
                     <use href="./images/sprite.svg#icon-smartphone"></use>
                 </svg>+38 096 111 11 11</a> </li>
         </ul>
+    </div>
+    <div class="mobile-menu js-menu-container">
+        <div class="container mobile-menu__container">
+            <button type="button" class="mobile-menu__close-btn js-close-menu" >
+                <svg class="mobile-menu__close-icon" width="40" height="40">
+                    <use href="./images/sprite.svg#close-modal"></use>
+                </svg>
+            </button>
+            <ul class="menu-nav">
+                <li class="menu-nav__item">
+                    <a class="menu-nav__link" href="./index.html"><span class="current">Студія</span></a>
+                </li>
+                <li class="menu-nav__item">
+                    <a class="menu-nav__link" href="./portfolio.html">Портфоліо</a>
+                </li>
+                <li class="menu-nav__item">
+                    <a class="menu-nav__link" href="">Контакти</a>
+                </li>
+            </ul>
+            <ul class="menu-contacts">
+                <li class="menu-contacts__item">
+                    <a class="menu-contacts__link menu-contacts__link_phone" href="">+38 096 111 11 11</a>
+                </li>
+                <li class="menu-contacts__item">
+                    <a class="menu-contacts__link" href="">info@devstudio.com</a>
+                </li>
+            </ul>
+            <ul class="menu-socials">
+                <li class="menu-socials__item">
+                    <a class="menu-socials__link menu-socials__link_border" href="https://instagram.com/alfa.ham?igshid=YmMyMTA2M2Y=">Instagram</a>
+                </li>
+                <li class="menu-socials__item">
+                    <a class="menu-socials__link menu-socials__link_border" href="">Twitter</a>
+                </li>
+                <li class="menu-socials__item">
+                    <a class="menu-socials__link menu-socials__link_border" href="">Facebook</a>
+                </li>
+                <li class="menu-socials__item">
+                    <a class="menu-socials__link" href="">LinkedIn</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </header>
     <main>
@@ -54,11 +100,43 @@
                         <li class="filter-list__item"><button type="button" class="filter-list__btn">Дизайн</button></li>
                         <li class="filter-list__item"><button type="button" class="filter-list__btn">Маркетинг</button></li>
                     </ul>
-                <!-- <ul class="projects">
+                <ul class="projects">
                     <li class="projects__item">
                         <a href="" class="projects__link">
                             <div class="projects__tumb">
-                                <img width="370" height="294" src="./images/pic-1.jpg" alt="Web_site">
+                                <picture>
+                                    <source
+                                    srcset="./images/projects/project-1/desctop-project/desktop-project-1@1x.jpg 1x, ./images/projects/project-1/desctop-project/desktop-project-1@2x.jpg 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 1200px)"                            
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-1/desctop-project/desktop-project-1webp@1x.webp 1x, ./images/projects/project-1/desctop-project/desktop-project-1webp@2x.webp 2x"
+                                    type="image/webp"
+                                    media="(min-width: 1200px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-1/tablet-project/tablet-project-1@1x.jpg 1x, ./images/projects/project-1/tablet-project/tablet-project-1@2x.jpg 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 768px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-1/tablet-project/tablet-project-1webp@1x.webp 1x, ./images/projects/project-1/tablet-project/tablet-project-1webp@2x.webp 2x"
+                                    type="image/webp"
+                                    media="(min-width: 768px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-1/mobile-project/mobile-project-1@1x.jpg 1x, ./images/projects/project-1/mobile-project/mobile-project-1@2x.jpg 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 480px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-1/mobile-project/mobile-project-1webp@1x.webp 1x, ./images/projects/project-1/mobile-project/mobile-project-1webp@2x.webp 2x"
+                                    type="image/webp"
+                                    media="(min-width: 480px)"
+                                    >
+                                    <img src="./images/projects/project-1/mobile-project/mobile-project-1@1x.jpg" alt="Web_site">
+                                </picture>
                                 <p class="projects__overlay">
                                     Ресурс пропонує комплексні 
                                     пропозиції з різним 
@@ -68,7 +146,7 @@
                                     компанію чи приватну особу.
                                     </p>
                             </div>
-                            <div class="projects__content"> 
+                            <div class="projects__content projets__content_technocrat"> 
                                 <h2 class="projects__name">Технокряк</h2>
                                 <p class="projects__type">Веб-сайт</p>
                             </div>
@@ -77,7 +155,39 @@
                     <li class="projects__item">
                         <a href="" class="projects__link">
                             <div class="projects__tumb">
-                                <img width="370" height="294" src="./images/pic-2.jpg" alt="design">
+                                <picture>
+                                    <source
+                                    srcset="./images/projects/project-2/desctop-project/desktop-project-2@1x.jpg 1x, ./images/projects/project-2/desctop-project/desktop-project-2@2x.jpg 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 1200px)"                            
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-2/desctop-project/desktop-project-2webp@1x.webp 1x, ./images/projects/project-2/desctop-project/desktop-project-2webp@2x.webp 2x"
+                                    type="image/webp"
+                                    media="(min-width: 1200px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-2/tablet-project/tablet-project-2@1x.jpg 1x, ./images/projects/project-2/tablet-project/tablet-project-2@2x.jpg 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 768px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-2/tablet-project/tablet-project-2webp@1x.webp 1x, ./images/projects/project-2/tablet-project/tablet-project-2webp@2x.webp 2x"
+                                    type="image/webp"
+                                    media="(min-width: 768px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-2/mobile-project/mobile-project-2@1x.jpg 1x, ./images/projects/project-2/mobile-project/mobile-project-2@2x.jpg 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 480px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-2/mobile-project/mobile-project-2webp@1x.webp 1x, ./images/projects/project-2/mobile-project/mobile-project-2webp@2x.webp 2x"
+                                    type="image/webp"
+                                    media="(min-width: 480px)"
+                                    >
+                                    <img src="./images/projects/project-2/mobile-project/mobile-project-2@1x.jpg" alt="Web_site">
+                                </picture>
                                 <p class="projects__overlay">
                                     Ресурс пропонує комплексні 
                                     пропозиції з різним 
@@ -96,7 +206,39 @@
                     <li class="projects__item">
                         <a href="" class="projects__link">
                             <div class="projects__tumb">
-                                <img width="370" height="294" src="./images/pic-3.jpg" alt="application">                            
+                                <picture>
+                                    <source
+                                    srcset="./images/projects/project-3/desctop-project/desktop-project-3@1x.jpg 1x, ./images/projects/project-3/desctop-project/desktop-project-3@2x.jpg 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 1200px)"                            
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-3/desctop-project/desktop-project-3webp@1x.webp 1x, ./images/projects/project-3/desctop-project/desktop-project-3webp@2x.webp 2x"
+                                    type="image/webp"
+                                    media="(min-width: 1200px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-3/tablet-project/tablet-project-3@1x.jpg 1x, ./images/projects/project-3/tablet-project/tablet-project-3@2x.jpg 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 768px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-3/tablet-project/tablet-project-3webp@1x.webp 1x, ./images/projects/project-3/tablet-project/tablet-project-3webp@2x.webp 2x"
+                                    type="image/webp"
+                                    media="(min-width: 768px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-3/mobile-project/mobile-project-3@1x.jpg 1x, ./images/projects/project-3/mobile-project/mobile-project-3@2x.jpg 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 480px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-3/mobile-project/mobile-project-3webp@1x.webp 1x, ./images/projects/project-3/mobile-project/mobile-project-3webp@2x.webp 2x"
+                                    type="image/webp"
+                                    media="(min-width: 480px)"
+                                    >
+                                    <img src="./images/projects/project-3/mobile-project/mobile-project-3@1x.jpg" alt="Web_site">
+                                </picture>
                                     <p class="projects__overlay">
                                         Ресурс пропонує комплексні 
                                         пропозиції з різним 
@@ -116,7 +258,39 @@
                     <li class="projects__item">
                         <a href="" class="projects__link">
                             <div class="projects__tumb">
-                                <img width="370" height="294" src="./images/pic-4.jpg" alt="marketing">
+                                <picture>
+                                    <source
+                                    srcset="./images/projects/project-4/desctop-project/desktop-project-4@1x.jpg 1x, ./images/projects/project-4/desctop-project/desktop-project-4@2x.jpg 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 1200px)"                            
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-4/desctop-project/desktop-project-4webp@1x.webp 1x, ./images/projects/project-4/desctop-project/desktop-project-4webp@2x.webp 2x"
+                                    type="image/webp"
+                                    media="(min-width: 1200px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-4/tablet-project/tablet-project-4@1x.jpg 1x, ./images/projects/project-4/tablet-project/tablet-project-4@2x.jpg 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 768px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-4/tablet-project/tablet-project-4webp@1x.webp 1x, ./images/projects/project-4/tablet-project/tablet-project-4webp@2x.webp 2x"
+                                    type="image/webp"
+                                    media="(min-width: 768px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-4/mobile-project/mobile-project-4@1x.jpg 1x, ./images/projects/project-4/mobile-project/mobile-project-4@2x.jpg 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 480px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-4/mobile-project/mobile-project-4webp@1x.webp 1x, ./images/projects/project-4/mobile-project/mobile-project-4webp@2x.webp 2x"
+                                    type="image/webp"
+                                    media="(min-width: 480px)"
+                                    >
+                                    <img src="./images/projects/project-4/mobile-project/mobile-project-4@1x.jpg" alt="Web_site">
+                                </picture>
                                 <p class="projects__overlay">
                                     Ресурс пропонує комплексні 
                                     пропозиції з різним 
@@ -135,7 +309,39 @@
                     <li class="projects__item">
                         <a href="" class="projects__link">
                             <div class="projects__tumb">
-                                <img width="370" height="294" src="./images/pic-5.jpg" alt="application">
+                                <picture>
+                                    <source
+                                    srcset="./images/projects/project-5/desctop-project/desktop-project-5@1x.jpg 1x, ./images/projects/project-5/desctop-project/desktop-project-5@2x.jpg 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 1200px)"                            
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-5/desctop-project/desktop-project-5webp@1x.webp 1x, ./images/projects/project-5/desctop-project/desktop-project-5webp@2x.webp 2x"
+                                    type="image/webp"
+                                    media="(min-width: 1200px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-5/tablet-project/tablet-project-5@1x.jpg 1x, ./images/projects/project-5/tablet-project/tablet-project-5@2x.jpg 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 768px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-5/tablet-project/tablet-project-5webp@1x.webp 1x, ./images/projects/project-5/tablet-project/tablet-project-5webp@2x.webp 2x"
+                                    type="image/webp"
+                                    media="(min-width: 768px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-5/mobile-project/mobile-project-5@1x.jpg 1x, ./images/projects/project-5/mobile-project/mobile-project-5@2x.jpg 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 480px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-5/mobile-project/mobile-project-5webp@1x.webp 1x, ./images/projects/project-5/mobile-project/mobile-project-5webp@2x.webp 2x"
+                                    type="image/webp"
+                                    media="(min-width: 480px)"
+                                    >
+                                    <img src="./images/projects/project-5/mobile-project/mobile-project-5@1x.jpg" alt="Web_site">
+                                </picture>
                                 <p class="projects__overlay">
                                     Ресурс пропонує комплексні 
                                     пропозиції з різним 
@@ -154,7 +360,39 @@
                     <li class="projects__item">
                         <a href="" class="projects__link">
                             <div class="projects__tumb">
-                                <img width="370" height="294" src="./images/pic-6.jpg" alt="web_site">
+                                <picture>
+                                    <source
+                                    srcset="./images/projects/project-6/desctop-project/desktop-project-6@1x.jpg 1x, ./images/projects/project-6/desctop-project/desktop-project-6@2x.jpg 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 1200px)"                            
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-6/desctop-project/desktop-project-6webp@1x.webp 1x, ./images/projects/project-6/desctop-project/desktop-project-6webp@2x.webp 2x"
+                                    type="image/webp"
+                                    media="(min-width: 1200px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-6/tablet-project/tablet-project-6@1x.jpg 1x, ./images/projects/project-6/tablet-project/tablet-project-6@2x.jpg 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 768px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-6/tablet-project/tablet-project-6webp@1x.webp 1x, ./images/projects/project-6/tablet-project/tablet-project-6webp@2x.webp 2x"
+                                    type="image/webp"
+                                    media="(min-width: 768px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-6/mobile-project/mobile-project-6@1x.jpg 1x, ./images/projects/project-6/mobile-project/mobile-project-6@2x.jpg 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 480px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-6/mobile-project/mobile-project-6webp@1x.webp 1x, ./images/projects/project-6/mobile-project/mobile-project-6webp@2x.webp 2x"
+                                    type="image/webp"
+                                    media="(min-width: 480px)"
+                                    >
+                                    <img src="./images/projects/project-6/mobile-project/mobile-project-6@1x.jpg" alt="Web_site">
+                                </picture>
                                 <p class="projects__overlay">
                                     Ресурс пропонує комплексні 
                                     пропозиції з різним 
@@ -173,7 +411,39 @@
                     <li class="projects__item">
                         <a href="" class="projects__link">
                             <div class="projects__tumb">
-                                <img width="370" height="294" src="./images/pic-7.jpg" alt="design">
+                                <picture>
+                                    <source
+                                    srcset="./images/projects/project-7/desctop-project/desktop-project-7@1x.jpg 1x, ./images/projects/project-7/desctop-project/desktop-project-7@2x.jpg 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 1200px)"                            
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-7/desctop-project/desktop-project-7webp@1x.webp 1x, ./images/projects/project-7/desctop-project/desktop-project-7webp@2x.webp 2x"
+                                    type="image/webp"
+                                    media="(min-width: 1200px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-7/tablet-project/tablet-project-7@1x.jpg 1x, ./images/projects/project-7/tablet-project/tablet-project-7@2x.jpg 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 768px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-7/tablet-project/tablet-project-7webp@1x.webp 1x, ./images/projects/project-7/tablet-project/tablet-project-7webp@2x.webp 2x"
+                                    type="image/webp"
+                                    media="(min-width: 768px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-7/mobile-project/mobile-project-7@1x.jpg 1x, ./images/projects/project-7/mobile-project/mobile-project-7@2x.jpg 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 480px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-7/mobile-project/mobile-project-7webp@1x.webp 1x, ./images/projects/project-7/mobile-project/mobile-project-7webp@2x.webp 2x"
+                                    type="image/webp"
+                                    media="(min-width: 480px)"
+                                    >
+                                    <img src="./images/projects/project-7/mobile-project/mobile-project-7@1x.jpg" alt="Web_site">
+                                </picture>
                                 <p class="projects__overlay">
                                     Ресурс пропонує комплексні 
                                     пропозиції з різним 
@@ -192,7 +462,39 @@
                     <li class="projects__item">
                         <a href="" class="projects__link">
                             <div class="projects__tumb">
-                                <img width="370" height="294" src="./images/pic-8.jpg" alt="marketing">
+                                <picture>
+                                    <source
+                                    srcset="./images/projects/project-8/desctop-project/desktop-project-8@1x.jpg 1x, ./images/projects/project-8/desctop-project/desktop-project-8@2x.jpg 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 1200px)"                            
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-8/desctop-project/desktop-project-8webp@1x.webp 1x, ./images/projects/project-8/desctop-project/desktop-project-8webp@2x.webp 2x"
+                                    type="image/webp"
+                                    media="(min-width: 1200px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-8/tablet-project/tablet-project-8@1x.jpg 1x, ./images/projects/project-8/tablet-project/tablet-project-8@2x.jpg 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 768px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-8/tablet-project/tablet-project-8webp@1x.webp 1x, ./images/projects/project-8/tablet-project/tablet-project-8webp@2x.webp 2x"
+                                    type="image/webp"
+                                    media="(min-width: 768px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-8/mobile-project/mobile-project-8@1x.jpg 1x, ./images/projects/project-8/mobile-project/mobile-project-8@2x.jpg 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 480px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-8/mobile-project/mobile-project-8webp@1x.webp 1x, ./images/projects/project-8/mobile-project/mobile-project-8webp@2x.webp 2x"
+                                    type="image/webp"
+                                    media="(min-width: 480px)"
+                                    >
+                                    <img src="./images/projects/project-8/mobile-project/mobile-project-8@1x.jpg" alt="Web_site">
+                                </picture>
                                 <p class="projects__overlay">
                                     Ресурс пропонує комплексні 
                                     пропозиції з різним 
@@ -211,7 +513,39 @@
                     <li class="projects__item">
                         <a href="" class="projects__link">
                             <div class="projects__tumb">
-                                <img width="370" height="294" src="./images/pic-9.jpg" alt="application">
+                                <picture>
+                                    <source
+                                    srcset="./images/projects/project-9/desctop-project/desktop-project-9@1x.jpg 1x, ./images/projects/project-9/desctop-project/desktop-project-9@2x.jpg 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 1200px)"                            
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-9/desctop-project/desktop-project-9webp@1x.webp 1x, ./images/projects/project-9/desctop-project/desktop-project-9webp@2x.webp 2x"
+                                    type="image/webp"
+                                    media="(min-width: 1200px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-9/tablet-project/tablet-project-9@1x.jpg 1x, ./images/projects/project-9/tablet-project/tablet-project-9@2x.jpg 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 768px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-9/tablet-project/tablet-project-9webp@1x.webp 1x, ./images/projects/project-9/tablet-project/tablet-project-9webp@2x.webp 2x"
+                                    type="image/webp"
+                                    media="(min-width: 768px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-9/mobile-project/mobile-project-9@1x.jpg 1x, ./images/projects/project-9/mobile-project/mobile-project-9@2x.jpg 2x"
+                                    type="image/jpeg"
+                                    media="(min-width: 480px)"                                    
+                                    >
+                                    <source
+                                    srcset="./images/projects/project-9/mobile-project/mobile-project-9webp@1x.webp 1x, ./images/projects/project-9/mobile-project/mobile-project-9webp@2x.webp 2x"
+                                    type="image/webp"
+                                    media="(min-width: 480px)"
+                                    >
+                                    <img src="./images/projects/project-9/mobile-project/mobile-project-9@1x.jpg" alt="Web_site">
+                                </picture>
                                 <p class="projects__overlay">
                                     Ресурс пропонує комплексні 
                                     пропозиції з різним 
@@ -227,14 +561,14 @@
                             </div>
                         </a>
                     </li>
-                </ul> -->
+                </ul>
             </div>
         </section>
     </main>
 
 <!-- ==========Footer========== -->
 
-<!-- <footer class="footer">
+<footer class="footer">
     <div class="container">
         <div class="footer-container">
             <div class="footer-address"> 
@@ -300,7 +634,8 @@
             </div>
         </div>
     </div>
-</footer> -->
+</footer>
+<script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
