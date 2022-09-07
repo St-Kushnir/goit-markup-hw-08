@@ -1,11 +1,19 @@
 .customers-list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -30px;
+    margin-bottom: -30px;
+}
+
+.customers-list__item {
+    margin-left: 30px;
+    margin-bottom: 30px;
 }
 
 .customers-list__link {
     @extend %align;
-    width: 170px;
+    width: 210px;
     height: 92px;
     color: #AFB1B8;
     border: 1px solid #AFB1B8;
@@ -18,9 +26,19 @@
         border-color: var(--accent-color);
     }
 }
-    
-    
 
 .customers-list__icon {
     Fill:currentColor;
+}
+
+@media screen and (min-width: 768px) {
+    .customers-list__link {
+        width: 226px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .customers-list__link {
+        width: 170px;
+    }
 }
