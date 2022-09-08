@@ -1,9 +1,11 @@
 .filter-list {
     display: flex;
+    gap: 8px;
+    margin-bottom: -15px;
 }
 
 .filter-list__item  {
-    margin-right: 8px;
+    margin-bottom: 15px;
 } 
 
 .filter-list__btn {
@@ -26,19 +28,9 @@
     }
 
     .projects {
-        display: flex;
-        flex-wrap: wrap;
+        display: block;
         margin-top: 40px;
-        margin-left: -30px;
-        margin-bottom: -30px;
     }
-
-    .projects__item {
-        flex-basis: calc(100% / 9 - 30px);
-        margin-left: 30px;
-        margin-bottom: 30px;
-    }
-
     .projects__link {
         display: block;
         background: #FFFFFF;
@@ -91,24 +83,18 @@
         color: var(--about-desc-color);
         }
 
+@media screen and (max-width: 479px) {
+    .projects__overlay {
+    overflow-y: auto;
+    
+    }
+}
+        
 @media screen and (max-width: 767px){
     .filter-list {
         flex-wrap: wrap;
         max-width: 326px;
-        height: 91px;
-    }
-    .filter-list__item:nth-child(3) {
-        margin-right: 0px;
-    }
-    
-    .filter-list__item:nth-child(n + 4) {
-        margin-top: 15px;
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-    .projets__content_technocrat {
-        padding: 20px 24px 56px 24px;
+        
     }
 }
 
@@ -118,11 +104,24 @@
     }
     .projects {
         margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -30px;
+        margin-bottom: -30px;
     }
 
+    .projects__item {
+        flex-basis: calc(100% / 9 - 30px);
+        margin-left: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
     .projects__overlay {
         padding: 49px 24px 77px 24px;
     }
+
 }
 
 @media screen and (min-width: 1200px){
