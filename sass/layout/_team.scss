@@ -3,10 +3,8 @@
 }
 
 .team-list {
-display: flex;
 margin-left: -30px;
 margin-bottom: -30px;
-flex-wrap: wrap;
 }
 
 .team-list__item {
@@ -27,12 +25,12 @@ padding-bottom: 24px;
 .team-list__workman {
     @include font (500, 16px, 19px, 0.03em);
     color: var(--title-text-color);
-    margin-bottom: 10px;
 }
 
 .team-list__speciality {
 @include font (400, 16px, 19px, 0.03em);
 color: var(--about-desc-color);
+margin-top: 10px;
 }
 
 .social-list {
@@ -64,6 +62,25 @@ color: var(--about-desc-color);
 
 .social-list__icon {
     Fill:currentColor;
+}
+
+@media screen and (max-width: 479px) {
+    .teammate {
+        max-width: 100%;
+        height: auto;
+    }
+}
+@media screen and (max-width: 768px) {
+    .team-list {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .team-list {
+        flex-wrap: wrap;
+        display: flex;
+    }
 }
 
 @media screen and (min-width: 1200px){

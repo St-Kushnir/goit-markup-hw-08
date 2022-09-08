@@ -43,6 +43,9 @@
                 </svg>+38 096 111 11 11</a> </li>
         </ul>
     </div>
+
+    <!-- MOBILE_MENU -->
+
     <div class="mobile-menu js-menu-container">
         <div class="container mobile-menu__container">
             <button type="button" class="mobile-menu__close-btn js-close-menu" >
@@ -61,28 +64,30 @@
                     <a class="menu-nav__link" href="">Контакти</a>
                 </li>
             </ul>
-            <ul class="menu-contacts">
-                <li class="menu-contacts__item">
-                    <a class="menu-contacts__link menu-contacts__link_phone" href="">+38 096 111 11 11</a>
-                </li>
-                <li class="menu-contacts__item">
-                    <a class="menu-contacts__link" href="">info@devstudio.com</a>
-                </li>
-            </ul>
-            <ul class="menu-socials">
-                <li class="menu-socials__item">
-                    <a class="menu-socials__link menu-socials__link_border" href="https://instagram.com/alfa.ham?igshid=YmMyMTA2M2Y=">Instagram</a>
-                </li>
-                <li class="menu-socials__item">
-                    <a class="menu-socials__link menu-socials__link_border" href="">Twitter</a>
-                </li>
-                <li class="menu-socials__item">
-                    <a class="menu-socials__link menu-socials__link_border" href="">Facebook</a>
-                </li>
-                <li class="menu-socials__item">
-                    <a class="menu-socials__link" href="">LinkedIn</a>
-                </li>
-            </ul>
+            <div class="contact-menu">
+                <ul class="menu-contacts">
+                    <li class="menu-contacts__item">
+                        <a class="menu-contacts__link menu-contacts__link_phone" href="">+38 096 111 11 11</a>
+                    </li>
+                    <li class="menu-contacts__item">
+                        <a class="menu-contacts__link" href="">info@devstudio.com</a>
+                    </li>
+                </ul>
+                <ul class="menu-socials">
+                    <li class="menu-socials__item">
+                        <a class="menu-socials__link menu-socials__link_border" href="https://instagram.com/alfa.ham?igshid=YmMyMTA2M2Y=">Instagram</a>
+                    </li>
+                    <li class="menu-socials__item">
+                        <a class="menu-socials__link menu-socials__link_border" href="">Twitter</a>
+                    </li>
+                    <li class="menu-socials__item">
+                        <a class="menu-socials__link menu-socials__link_border" href="">Facebook</a>
+                    </li>
+                    <li class="menu-socials__item">
+                        <a class="menu-socials__link" href="">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>       
         </div>
     </div>
 </header>
@@ -204,7 +209,7 @@
                             type="image/webp"
                             media="(min-width: 480px)"
                             >
-                            <img src="./images/team/mobile/demyanenko/mobile-demyanenko@1x.jpg" alt="teammate">
+                            <img class="teammate" src="./images/team/mobile/demyanenko/mobile-demyanenko@1x.jpg" alt="teammate">
                         </picture>
                         <div class="team-list__content">
                             <h3  class="team-list__workman">Игорь Демьяненко</h3>
@@ -273,7 +278,7 @@
                             type="image/webp"
                             media="(min-width: 480px)"
                             >
-                            <img src="./images/team/mobile/repina/mobile-repina@1x.jpg" alt="teammate">
+                            <img class="teammate" src="./images/team/mobile/repina/mobile-repina@1x.jpg" alt="teammate">
                         </picture>
                         <div class="team-list__content">
                             <h3  class="team-list__workman">Ольга Рєпіна</h3>
@@ -342,7 +347,7 @@
                             type="image/webp"
                             media="(min-width: 768px)"
                             >
-                            <img src="./images/team/mobile/tarasov/mobile-tarasov@1x.jpg" alt="teammate">
+                            <img class="teammate" src="./images/team/mobile/tarasov/mobile-tarasov@1x.jpg" alt="teammate">
                         </picture>
                         <div class="team-list__content">
                             <h3  class="team-list__workman">Микола Тарасов</h3>
@@ -411,7 +416,7 @@
                             type="image/webp"
                             media="(min-width: 480px)"
                             >
-                            <img src="./images/team/mobile/yermakov/mobile-yermakov@1x.jpg" alt="teammate">
+                            <img class="teammate" src="./images/team/mobile/yermakov/mobile-yermakov@1x.jpg" alt="teammate">
                         </picture>
                         <div class="team-list__content">
                             <h3  class="team-list__workman">Михайло Єрмаков</h3>
@@ -450,7 +455,7 @@
                     </li>
                 </ul>
             </div>
-        </section> -->
+        </section> 
 
 <!--=========Clients========-->
 
@@ -508,8 +513,8 @@
 <!-- ==========Footer========== -->
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-container">
+        <div class="container footer__container">
+            <div class="main-address">
                 <div class="footer-address"> 
                         <a class="logo logo_theme_dark" href="./index.html"><span class="current">Web</span>Studio</a>
                     <address class="footer-contacts">
@@ -527,7 +532,7 @@
                     </address>
                 </div>
                 <div class="footer-socials">
-                    <h3 class="subtitle subtitle_theme_dark subtitle_footer">приєднуйтесь</h3>
+                    <p class="subtitle subtitle_theme_dark subtitle_footer">приєднуйтесь</p>
                     <ul class="footer-socials__list">
                         <li class="footer-socials__item">
                             <a href="" class="footer-socials__link">
@@ -559,6 +564,7 @@
                         </li>
                     </ul>      
                 </div>
+            </div>
                 <div class="subscription">
                     <p class="subtitle subtitle_theme_dark subtitle_footer">Підпишіться на розсилку</p>
                     <form class="subscription__form">
@@ -571,7 +577,6 @@
                         </svg> </button>
                     </form>
                 </div>
-            </div>
         </div>
     </footer>
 
