@@ -94,6 +94,11 @@
     .menu-socials {
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: -10px;
+    }
+    
+    .menu-socials__item {
+        margin-bottom: 10px;
     }
     
     .menu-socials__item:not(:last-child) {
